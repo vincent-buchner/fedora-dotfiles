@@ -1,0 +1,60 @@
+# =============== SECRETS — the whole point ===============
+*.local
+*_local
+.env
+.env.*
+!.env.example
+*secret*
+*_secret*
+*credentials*
+*token*
+*.pem
+*.key
+!*.pub.key
+.netrc
+.npmrc
+id_rsa*
+id_ed25519*
+*.gpg
+!*.gpg.example
+
+# =============== SHELL / SCRIPTING ===============
+*.log
+*.tmp
+*.bak
+*.swp
+*.orig
+.bash_history
+.zsh_history
+.fish_history
+*_history
+nohup.out
+
+# =============== STOW ARTIFACTS ===============
+# dangling-symlink cleanup files, if you ever generate any
+*.stow-local-ignore.bak
+
+# =============== GITLEAKS OUTPUT ===============
+gitleaks-report.json
+gitleaks-report.*
+
+# =============== LANGUAGE / TOOLING CRUFT ===============
+# only relevant if you keep any scripts/venvs inside the repo
+__pycache__/
+*.pyc
+.venv/
+venv/
+node_modules/
+*.egg-info/
+
+# =============== OS / EDITOR JUNK ===============
+.DS_Store
+Thumbs.db
+*~
+.directory
+.Trash-*
+
+# =============== EDITOR STATE ===============
+.vscode/
+.idea/
+*.sublime-workspace
