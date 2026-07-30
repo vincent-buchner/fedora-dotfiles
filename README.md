@@ -1,3 +1,4 @@
+
 # Fedora Linux Dotfiles
 
 This is my collection of tools I use for my daily driving machines.
@@ -37,10 +38,46 @@ Oh, this does not include my tmux and neovim configs. Those can be found at thes
 - [vincentmux](https://github.com/vincent-buchner/vincentmux)
 - [neo-vimcent-v2](https://github.com/vincent-buchner/neo-vimcent-v2)
 
+### How to Install Packages
+
+To install the dependencies, you must first have `python` installed. This should come with your Fedora install, but in case it doesn't, you can do:
+
+```bash
+sudo dnf install python3
+```
+
+Then you can install the packages using the setup script:
+
+```bash
+./scripts/setup.py
+```
+
+### How to Add New Packages
+
+It's pretty easy, just add the name of the package to the `PACKAGES` constant in `/scripts/constants/packages.py`
+
+### How to Update README
+
+Just like how you install the packages, just a different script. Ensure `python` is installed:
+
+```bash
+sudo dnf install python3
+```
+
+Then you can run this script that will update the readme:
+
+```bash
+./scripts/build_readme.py
+```
+
+New sections can be added in the `static` directory inside of scripts.
+
+### Why did you write the scripts in Python and not BASH?
+
+It was easier for what I wanted to do.
 ### Documentation
-
-hello world
-
+These are the packages installed as part of the environment.
+The descriptions for each package come from the man page descriptions.
 | Package | Description |
 | --- | --- |
 | cargo | The Rust package manager |

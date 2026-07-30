@@ -20,7 +20,13 @@ def build_table(packages: list[str]) -> str:
 def build_readme() -> str:
     before_desc = BEFORE_DESC_PATH.read_text().rstrip()
     table = build_table(PACKAGES)
-    return f"{before_desc}\n\n### Documentation\n\nhello world\n\n{table}\n"
+    return f"""
+{before_desc}
+### Documentation
+These are the packages installed as part of the environment.
+The descriptions for each package come from the man page descriptions.
+{table}
+"""
 
 
 if __name__ == "__main__":
