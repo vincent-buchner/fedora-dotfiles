@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+import argparse
+
 from _describe import describe_package
 from _install import install_packages
 from constants.packages import PACKAGES
@@ -21,12 +23,23 @@ def print_package_list() -> None:
 
 
 def main() -> None:
-    print(HEADER)
-    print("Hello! Welcome to the Fedora Dotfiles setup.")
-    print("Here are the packages that will be installed:\n")
-    print_package_list()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-v", "--verbose", action="store_true")
+    args = parser.parse_args()
 
-    answer = input("\nWould you like to continue? [y/N] ").strip().lower()
+    if args.verbose:
+        print(HEADER)
+        print("Hello! Welcome to the Fedora Dotfiles setup.")
+        print("Here are the packages that will be installed:\n")
+        print_package_list()
+
+    answer = (
+        input(
+            "\nThis will install enviroment packages. Would you like to continue? [y/N] "
+        )
+        .strip()
+        .lower()
+    )
     if answer == "y":
         install_packages(PACKAGES)
     else:
