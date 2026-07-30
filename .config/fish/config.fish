@@ -4,3 +4,4 @@ end
 
 starship init fish | source
 zoxide init fish | source
+export PATH="$HOME/.local/bin:$PATH"
