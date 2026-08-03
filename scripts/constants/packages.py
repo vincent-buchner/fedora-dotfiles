@@ -19,4 +19,12 @@ PACKAGES = [
     "golang",
     "rust",
     "cargo",
+    # ============ Music and Audio ============
+    "cava",
+    # Require for ncspot: cargo install ncspot
+    "dbus-devel",
+    "libxcb-devel",
+    "ncurses-devel",
+    "openssl-devel",
+    "pulseaudio-libs-devel",
 ]
