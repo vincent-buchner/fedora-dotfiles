@@ -15,10 +15,12 @@ PACKAGES = [
     "fd",
     # ============ Language Specific ============
     "python3",
+    "uv",
     "nodejs",
     "golang",
     "rust",
     "cargo",
+    "gcc-c++",
     # ============ Music and Audio ============
     "cava",
     # Require for ncspot: cargo install ncspot
