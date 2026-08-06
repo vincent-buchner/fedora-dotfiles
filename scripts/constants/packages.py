@@ -29,4 +29,6 @@ PACKAGES = [
     "ncurses-devel",
     "openssl-devel",
     "pulseaudio-libs-devel",
+    # Needed for pyaudio
+    "portaudio-devel",
 ]
