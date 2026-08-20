@@ -1,3 +1,4 @@
+
 # Fedora Linux Dotfiles
 
 This is my collection of tools I use for my daily driving machines.
@@ -55,6 +56,12 @@ Then you can install the packages using the setup script:
 
 It's pretty easy, just add the name of the package to the `PACKAGES` constant in `/scripts/constants/packages.py`
 
+> NOTE: for the Docker install, you still need to add the daemon to run on start. You can run the following command from [their docs](https://docs.docker.com/engine/install/fedora/#install-docker-engine) to do so:
+
+```bash
+sudo systemctl enable --now docker
+```
+
 ### How to Update README
 
 Just like how you install the packages, just a different script. Ensure `python` is installed:
@@ -74,43 +81,40 @@ New sections can be added in the `static` directory inside of scripts.
 ### Why did you write the scripts in Python and not BASH?
 
 It was easier for what I wanted to do.
-
 ### Documentation
-
 These are the packages installed as part of the environment.
 The descriptions for each package come from the man page descriptions.
-
-| Package               | Description                                                                  |
-| --------------------- | ---------------------------------------------------------------------------- |
-| cargo                 | The Rust package manager                                                     |
-| cava                  |                                                                              |
-| containerd.io         |                                                                              |
-| dbus-devel            |                                                                              |
-| docker-buildx-plugin  |                                                                              |
-| docker-ce             |                                                                              |
-| docker-ce-cli         |                                                                              |
-| docker-compose-plugin |                                                                              |
-| fd                    | find entries in the filesystem                                               |
-| fish                  | the friendly interactive shell                                               |
-| fzf                   | a command-line fuzzy finder                                                  |
-| gcc-c++               |                                                                              |
-| gh                    | GitHub CLI                                                                   |
-| gitleaks              |                                                                              |
-| golang                |                                                                              |
-| htop                  | interactive process viewer                                                   |
-| kitty                 |                                                                              |
-| libxcb-devel          |                                                                              |
-| ncurses-devel         |                                                                              |
-| neovim                |                                                                              |
-| nodejs                |                                                                              |
-| openssl-devel         |                                                                              |
-| portaudio-devel       |                                                                              |
-| pulseaudio-libs-devel |                                                                              |
-| python3               | an interpreted, interactive, object-oriented programming language            |
-| ripgrep               |                                                                              |
-| rust                  |                                                                              |
-| stow                  | manage farms of symbolic links                                               |
-| tldr                  | tldr 3.4.4 Python command line client for tldr usage: tldr command [options] |
-| tmux                  | terminal multiplexer                                                         |
-| uv                    |                                                                              |
-| zoxide                | a smarter cd command                                                         |
+| Package | Description |
+| --- | --- |
+| cargo | The Rust package manager |
+| cava |  |
+| containerd.io |  |
+| dbus-devel |  |
+| docker-buildx-plugin |  |
+| docker-ce |  |
+| docker-ce-cli |  |
+| docker-compose-plugin |  |
+| fd | find entries in the filesystem |
+| fish | the friendly interactive shell |
+| fzf | a command-line fuzzy finder |
+| gcc-c++ |  |
+| gh | GitHub CLI |
+| gitleaks |  |
+| golang |  |
+| htop | interactive process viewer |
+| kitty |  |
+| libxcb-devel |  |
+| ncurses-devel |  |
+| neovim |  |
+| nodejs |  |
+| openssl-devel |  |
+| portaudio-devel |  |
+| pulseaudio-libs-devel |  |
+| python3 | an interpreted, interactive, object-oriented programming language |
+| ripgrep |  |
+| rust |  |
+| stow | manage farms of symbolic links |
+| tldr | tldr 3.4.4 Python command line client for tldr usage: tldr command [options] |
+| tmux | terminal multiplexer |
+| uv |  |
+| zoxide | a smarter cd command |

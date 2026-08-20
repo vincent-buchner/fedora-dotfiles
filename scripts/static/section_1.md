@@ -55,6 +55,12 @@ Then you can install the packages using the setup script:
 
 It's pretty easy, just add the name of the package to the `PACKAGES` constant in `/scripts/constants/packages.py`
 
+> NOTE: for the Docker install, you still need to add the daemon to run on start. You can run the following command from [their docs](https://docs.docker.com/engine/install/fedora/#install-docker-engine) to do so:
+
+```bash
+sudo systemctl enable --now docker
+```
+
 ### How to Update README
 
 Just like how you install the packages, just a different script. Ensure `python` is installed:
