@@ -5,3 +5,6 @@ end
 starship init fish | source
 zoxide init fish | source
 export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$HOME/go/bin:$PATH"
+
+# ===== ALIASES =====
+source ~/.config/fish/aliases/git.fish

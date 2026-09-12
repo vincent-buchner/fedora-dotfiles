@@ -31,6 +31,33 @@ git config core.hooksPath .githooks
 
 It does require gitleaks to be installed, so you'll wanna do that.
 
+### How .config Syncing Works
+
+The `.config` directory in this repo mirrors the parts of `~/.config` I want shared across machines and tracked in git (currently `fish`, `kitty`, and `starship.toml`). Everything else already in `~/.config` (app data, credentials, machine-specific junk) is left alone since it never exists in this repo.
+
+Syncing is done with [GNU Stow](https://www.gnu.org/software/stow/), which symlinks the contents of `.dotfiles/.config` into `~/.config`. Since `~/.config` already exists as a real directory on every machine, Stow "folds" into it and only symlinks the individual files/subdirs that exist in this repo, rather than replacing the whole directory.
+
+To sync (or re-sync after adding new files), run:
+
+```bash
+./scripts/stow_config.sh
+```
+
+This is just a thin wrapper around:
+
+```bash
+stow -d . -t ~/.config -R .config
+```
+
+- `-d .` — the repo itself is the Stow directory (where packages live)
+- `-t ~/.config` — target is `~/.config`, not `$HOME`
+- `.config` — the package name, i.e. `.dotfiles/.config/`
+- `-R` — restow (unlink + relink), safe to run any time
+
+Note it's scoped to the `.config` package specifically (not the whole repo), so `.githooks` and `scripts` never get symlinked into `$HOME`.
+
+To share a new app's config, move it into `.dotfiles/.config/<app>` and rerun the script above.
+
 ### Related Repositories
 
 Oh, this does not include my tmux and neovim configs. Those can be found at these repos:
@@ -110,7 +137,7 @@ The descriptions for each package come from the man page descriptions.
 | openssl-devel |  |
 | portaudio-devel |  |
 | pulseaudio-libs-devel |  |
-| python3 | an interpreted, interactive, object-oriented programming language |
+| python3 | an interpreted, interactive, object-oriented programming lan‐ guage |
 | ripgrep |  |
 | rust |  |
 | stow | manage farms of symbolic links |
