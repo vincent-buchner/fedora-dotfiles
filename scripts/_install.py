@@ -24,5 +24,12 @@ def set_docker_registry():
     )
 
 
+def add_fedora_hyprland_copr_repo():
+    result = subprocess.run(
+        ["sudo", "dnf", "copr", "enable", "lionheartp/Hyprland"], check=False
+    )
+    result.check_returncode()
+
+
 def install_packages(packages: list[str]):
     subprocess.run(["sudo", "dnf", "install", *packages], check=False)

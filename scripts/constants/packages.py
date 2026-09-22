@@ -37,4 +37,9 @@ PACKAGES = [
     "containerd.io",
     "docker-buildx-plugin",
     "docker-compose-plugin",
+    # ============ Hyprland ============
+    "hyprland",
+    "hyprland-guiutils",
+    "quickshell",
+    "unixODBC",
 ]

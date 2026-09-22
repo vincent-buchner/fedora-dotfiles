@@ -2,7 +2,11 @@
 import argparse
 
 from _describe import describe_package
-from _install import install_packages, set_docker_registry
+from _install import (
+    add_fedora_hyprland_copr_repo,
+    install_packages,
+    set_docker_registry,
+)
 from constants.packages import PACKAGES
 
 HEADER = """
@@ -42,6 +46,7 @@ def main() -> None:
     )
     if answer == "y":
         set_docker_registry()
+        add_fedora_hyprland_copr_repo()
         install_packages(PACKAGES)
     else:
         print("Ight no worries, nothing installed.")
