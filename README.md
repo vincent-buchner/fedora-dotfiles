@@ -129,19 +129,24 @@ The descriptions for each package come from the man page descriptions.
 | gitleaks |  |
 | golang |  |
 | htop | interactive process viewer |
+| hyprland | Dynamic tiling Wayland compositor |
+| hyprland-guiutils |  |
 | kitty |  |
 | libxcb-devel |  |
 | ncurses-devel |  |
 | neovim |  |
 | nodejs |  |
 | openssl-devel |  |
+| pnpm |  |
 | portaudio-devel |  |
 | pulseaudio-libs-devel |  |
-| python3 | an interpreted, interactive, object-oriented programming lan‐ guage |
+| python3 | an interpreted, interactive, object-oriented programming language |
+| quickshell |  |
 | ripgrep |  |
 | rust |  |
 | stow | manage farms of symbolic links |
 | tldr | tldr 3.4.4 Python command line client for tldr usage: tldr command [options] |
 | tmux | terminal multiplexer |
+| unixODBC | An ODBC implementation for Unix |
 | uv |  |
 | zoxide | a smarter cd command |

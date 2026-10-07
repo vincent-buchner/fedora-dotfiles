@@ -17,6 +17,7 @@ PACKAGES = [
     "python3",
     "uv",
     "nodejs",
+    "pnpm",
     "golang",
     "rust",
     "cargo",
