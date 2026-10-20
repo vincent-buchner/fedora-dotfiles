@@ -149,4 +149,6 @@ The descriptions for each package come from the man page descriptions.
 | tmux | terminal multiplexer |
 | unixODBC | An ODBC implementation for Unix |
 | uv |  |
+| waybar | configuration file |
+| wiremix | TUI mixer for PipeWire |
 | zoxide | a smarter cd command |
