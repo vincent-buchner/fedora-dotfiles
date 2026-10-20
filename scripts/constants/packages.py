@@ -24,6 +24,7 @@ PACKAGES = [
     "gcc-c++",
     # ============ Music and Audio ============
     "cava",
+    "wiremix",
     # Require for ncspot: cargo install ncspot
     "dbus-devel",
     "libxcb-devel",
@@ -43,4 +44,5 @@ PACKAGES = [
     "hyprland-guiutils",
     "quickshell",
     "unixODBC",
+    "waybar",
 ]
